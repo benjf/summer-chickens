@@ -1,0 +1,29 @@
+<body>
+  <h1>Summer Chickens</h1>
+
+  {{#if motherHen}}
+    <form class="new-chicken">
+      <input type="text" name="chicken_name" class="chicken_name" placeholder="Type to add a new chicken" />
+    </form>
+  {{/if}}
+
+  <h2>{{ today }}</h2>
+
+  <p>You may have as much time on the iPad, computer, or TV as we have<br /> agreed on, as long as the following has been done:</p>
+
+  <table id="chickens">
+    <tr>
+      <th class="align-left">Did you...</th>
+      <th>Preston</th>
+      <th>Silas</th>
+    </tr>
+    {{#each chickens}}
+      <tr>
+        <td class="chicken-name">{{#if motherHen}}<button class="delete">&times;</button> {{/if}}{{ name }}</td>
+        <td class="chicken-box"><input type="checkbox" name="silas" checked="{{silas}}" class="toggle-silas" /></td>
+        <td class="chicken-box"><input type="checkbox" name="preston" checked="{{preston}}" class="toggle-preston" /></td>
+      </tr>
+    {{/each}}
+  </table>
+
+</body>
